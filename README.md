@@ -3,7 +3,7 @@ Link to the website:   https://cse5335vsb4640.herokuapp.com/
 
 ##Server Framework
 
-1)I chose the server framework as nodejs(Express platform).
+I chose the server framework as nodejs(Express platform).
 I used node because of its fast execution speed as it uses the javascript V8 engine.
 It uses javascript on the server side and mostly I knew javascript so it was easy for me to learn.
 It uses asynchronous callbacks so parallel threads run the task very fast using non blocking operations.

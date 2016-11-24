@@ -30,9 +30,9 @@ body VARCHAR(1000)
 )";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Table apidata dropped successfully";
+    echo "Table apidata created successfully";
 } else {
-    echo "Error dropping table: " . mysqli_error($conn);
+    echo "Error creating table: " . mysqli_error($conn);
 }
 
 // error_reporting(E_ALL);
@@ -60,7 +60,7 @@ foreach ($out as $key => $value) {
 	$array = json_decode(json_encode($value), true);
 	// print_r($array);
 	$keys = array_map('mysql_real_escape_string', array_keys($array));
-	 print_r($keys);
+	 var_dump($keys);
 	$newarray = array_map('mysql_real_escape_string', $array);
 	// print_r($newarray);
 

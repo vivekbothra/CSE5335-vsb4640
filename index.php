@@ -40,7 +40,7 @@ if($output == FALSE){
 }
 curl_close($ch);
 $out=json_decode($output);
-// print_r($out);
+ print_r($out);
 
 foreach ($out as $key => $value) {
 	# code...

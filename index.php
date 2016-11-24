@@ -59,9 +59,9 @@ foreach ($out as $key => $value) {
 	# code...
 	$array = json_decode(json_encode($value), true);
 	 // print_r($array);
-	$keys = array_map('mysqli_real_escape_string', array_keys($array));
+	$keys = array_map(null, array_keys($array));
 	 print_r($keys);
-	$newarray = array_map('mysqli_real_escape_string', $array);
+	$newarray = array_map(null, $array);
 	// print_r($newarray);
 
 	  $sql = "INSERT INTO apidata(`".implode('`, `', $keys)."`) VALUES('".implode("', '", $newarray)."')";

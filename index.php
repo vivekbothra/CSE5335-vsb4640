@@ -21,19 +21,19 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 // $sql = "DROP table apidata";
-$sql = "CREATE TABLE apidata (
-id INT(150) NOT NULL  PRIMARY KEY,
-userId INT(150) UNSIGNED, 
-title VARCHAR(1000) NOT NULL,
-body VARCHAR(1000)
+// $sql = "CREATE TABLE apidata (
+// id INT(150) NOT NULL  PRIMARY KEY,
+// userId INT(150) UNSIGNED, 
+// title VARCHAR(1000) NOT NULL,
+// body VARCHAR(1000)
 
-)";
+// )";
 
-if (mysqli_query($conn, $sql)) {
-    echo "Table apidata created successfully";
-} else {
-    echo "Error creating table: " . mysqli_error($conn);
-}
+// if (mysqli_query($conn, $sql)) {
+//     echo "Table apidata created successfully";
+// } else {
+//     echo "Error creating table: " . mysqli_error($conn);
+// }
 
 // error_reporting(E_ALL);
 // ini_set('display_errors', 1);
@@ -53,7 +53,7 @@ if($output == FALSE){
 }
 curl_close($ch);
 $out=json_decode($output);
- // print_r($out);
+  print_r($out);
 
 foreach ($out as $key => $value) {
 	# code...

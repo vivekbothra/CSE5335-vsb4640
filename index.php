@@ -1,12 +1,20 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "webdata";
+
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "webdata";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+// $conn = mysqli_connect($servername, $username, $password, $dbname);
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$conn = new mysqli($server, $username, $password, $db);
 
 // Check connection
 if (!$conn) {

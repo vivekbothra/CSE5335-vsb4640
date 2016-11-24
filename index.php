@@ -40,15 +40,15 @@ if($output == FALSE){
 }
 curl_close($ch);
 $out=json_decode($output);
- print_r($out);
+ // print_r($out);
 
 foreach ($out as $key => $value) {
 	# code...
 	$array = json_decode(json_encode($value), true);
 	// print_r($array);
-	$keys = array_map('mysql_real_escape_string', array_keys($array));
+	$keys = array_map('mysqli_real_escape_string', array_keys($array));
 	// print_r($keys);
-	$newarray = array_map('mysql_real_escape_string', $array);
+	$newarray = array_map('mysqli_real_escape_string', $array);
 	// print_r($newarray);
 
 	 // $sql = "INSERT INTO apidata(`".implode('`, `', $keys)."`) VALUES('".implode("', '", $newarray)."')";

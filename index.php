@@ -21,19 +21,19 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "CREATE TABLE apidata (
-userId INT(150) UNSIGNED, 
-id INT(150) NOT NULL  PRIMARY KEY,
-title VARCHAR(1000) NOT NULL,
-body VARCHAR(1000)
+// $sql = "CREATE TABLE apidata (
+// userId INT(150) UNSIGNED, 
+// id INT(150) NOT NULL  PRIMARY KEY,
+// title VARCHAR(1000) NOT NULL,
+// body VARCHAR(1000)
 
-)";
+// )";
 
-if (mysqli_query($conn, $sql)) {
-    echo "Table apidata created successfully";
-} else {
-    echo "Error creating table: " . mysqli_error($conn);
-}
+// if (mysqli_query($conn, $sql)) {
+//     echo "Table apidata created successfully";
+// } else {
+//     echo "Error creating table: " . mysqli_error($conn);
+// }
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -64,13 +64,13 @@ foreach ($out as $key => $value) {
 	$newarray = array_map('mysql_real_escape_string', $array);
 	// print_r($newarray);
 
-	 // $sql = "INSERT INTO apidata(`".implode('`, `', $keys)."`) VALUES('".implode("', '", $newarray)."')";
+	  $sql = "INSERT INTO apidata(`".implode('`, `', $keys)."`) VALUES('".implode("', '", $newarray)."')";
 
-// 	if (mysqli_query($conn, $sql)) {
-//    echo "inserted successfully";
-// } else {
-//    echo "Error inserting: " . mysqli_error($conn);
-// }
+	if (mysqli_query($conn, $sql)) {
+   echo "inserted successfully";
+} else {
+   echo "Error inserting: " . mysqli_error($conn);
+}
 
 }
 

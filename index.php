@@ -20,7 +20,7 @@ $conn = new mysqli($server, $username, $password, $db);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-
+$sql = "DROP table apidata";
 // $sql = "CREATE TABLE apidata (
 // userId INT(150) UNSIGNED, 
 // id INT(150) NOT NULL  PRIMARY KEY,
@@ -29,11 +29,11 @@ if (!$conn) {
 
 // )";
 
-// if (mysqli_query($conn, $sql)) {
-//     echo "Table apidata created successfully";
-// } else {
-//     echo "Error creating table: " . mysqli_error($conn);
-// }
+if (mysqli_query($conn, $sql)) {
+    echo "Table apidata dropped successfully";
+} else {
+    echo "Error dropping table: " . mysqli_error($conn);
+}
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);

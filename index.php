@@ -60,17 +60,17 @@ foreach ($out as $key => $value) {
 	$array = json_decode(json_encode($value), true);
 	 // print_r($array);
 	$keys = array_map(null, array_keys($array));
-	 print_r($keys);
+	 // print_r($keys);
 	$newarray = array_map(null, $array);
 	// print_r($newarray);
 
-	  $sql = "INSERT INTO apidata(`".implode('`, `', $keys)."`) VALUES('".implode("', '", $newarray)."')";
+// 	  $sql = "INSERT INTO apidata(`".implode('`, `', $keys)."`) VALUES('".implode("', '", $newarray)."')";
 
-	if (mysqli_query($conn, $sql)) {
-   echo "inserted successfully";
-} else {
-   echo "Error inserting: " . mysqli_error($conn);
-}
+// 	if (mysqli_query($conn, $sql)) {
+//    echo "inserted successfully";
+// } else {
+//    echo "Error inserting: " . mysqli_error($conn);
+// }
 
 }
 

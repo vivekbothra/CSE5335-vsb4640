@@ -20,14 +20,14 @@ $conn = new mysqli($server, $username, $password, $db);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "DROP table apidata";
-// $sql = "CREATE TABLE apidata (
-// userId INT(150) UNSIGNED, 
-// id INT(150) NOT NULL  PRIMARY KEY,
-// title VARCHAR(1000) NOT NULL,
-// body VARCHAR(1000)
+// $sql = "DROP table apidata";
+$sql = "CREATE TABLE apidata (
+id INT(150) NOT NULL  PRIMARY KEY,
+userId INT(150) UNSIGNED, 
+title VARCHAR(1000) NOT NULL,
+body VARCHAR(1000)
 
-// )";
+)";
 
 if (mysqli_query($conn, $sql)) {
     echo "Table apidata dropped successfully";
@@ -35,7 +35,7 @@ if (mysqli_query($conn, $sql)) {
     echo "Error dropping table: " . mysqli_error($conn);
 }
 
-error_reporting(E_ALL);
+// error_reporting(E_ALL);
 ini_set('display_errors', 1);
 $ch=curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://jsonplaceholder.typicode.com/posts');
@@ -60,7 +60,7 @@ foreach ($out as $key => $value) {
 	$array = json_decode(json_encode($value), true);
 	// print_r($array);
 	$keys = array_map('mysql_real_escape_string', array_keys($array));
-	// print_r($keys);
+	 print_r($keys);
 	$newarray = array_map('mysql_real_escape_string', $array);
 	// print_r($newarray);
 

@@ -36,7 +36,7 @@ if (mysqli_query($conn, $sql)) {
 }
 
 // error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// ini_set('display_errors', 1);
 $ch=curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://jsonplaceholder.typicode.com/posts');
 

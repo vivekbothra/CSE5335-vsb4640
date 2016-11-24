@@ -58,9 +58,9 @@ $out=json_decode($output);
 foreach ($out as $key => $value) {
 	# code...
 	$array = json_decode(json_encode($value), true);
-	 print_r($array);
+	 // print_r($array);
 	$keys = array_map('mysql_real_escape_string', array_keys($array));
-	 var_dump($keys);
+	 print_r($keys);
 	$newarray = array_map('mysql_real_escape_string', $array);
 	// print_r($newarray);
 

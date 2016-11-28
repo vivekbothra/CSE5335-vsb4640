@@ -1,5 +1,5 @@
 # CSE5335-vsb4640
-Link to the website:   https://whispering-mesa-62026.herokuapp.com/
+Link to the website:   https://cse5335--vsb4640.herokuapp.com/
 
 ##SQL Framework
 

@@ -32,6 +32,7 @@ As heroku does not support mysql so I had to use cleardb extension and update my
 ##other components
 
 I used XAMPP(Apache, mysql,php,perl) package which made my work easy working with database and php simultaneously.
+Program starts by executing index.php automatically when the server starts running.
 
 ##using it professionally
 

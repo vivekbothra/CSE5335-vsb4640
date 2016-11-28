@@ -1,50 +1,42 @@
 # CSE5335-vsb4640
-Link to the website:   https://cse5335vsb4640.herokuapp.com/
+Link to the website:   https://whispering-mesa-62026.herokuapp.com/
+
+##SQL Framework
+
+I chose Mysql as my database framework because PHP works better with Mysql and Mysql runs very fast with PHP and I also had to use cleardb extension which supports mysql commands for the heroku server.
 
 ##Server Framework
 
-I chose the server framework as nodejs(Express platform).
-I used node because of its fast execution speed as it uses the javascript V8 engine.
-It uses javascript on the server side and mostly I knew javascript so it was easy for me to learn.
-It uses asynchronous callbacks so parallel threads run the task very fast using non blocking operations.
-I liked the express framework for node as it automatically gave me the inbuilt node server without having to write the server script and
-also because it is better as it uses the model view controller paradigm so the flow can be known easily.
+I chose the server framework as php.
+I chose php because I had worked on php and had built basic apps using its MVC framework.
+It is easy to build apps on php for beginners and the language is easy to learn.
 
 ##Client Framework
 
 I chose javascript and jquery as the client side framework. I chose javascript as it is one of the best client side frameworks and Jquery can be
- used very easily to manipulate the DOM as its sole purpose is to manipulate DOM. So for displaying JSON data into table I used JQuery methods.
- Javascript is easily used with maps and charts so I chose Javascript.
+ used very easily to manipulate the DOM as its sole purpose is to manipulate DOM. So for displaying Ajax calls from the table I used JQuery methods.
+ I used Jquery animate method to animate the data.
+ 
 
 ##Easy Stuff
 
-Making Ajax calls , displaying getting the response, showing the json data in tables was easy. I was familiar with ajax calls so it made my work easy.
-I have previously worked using ajax and displaying data through jquery which made the task easier.Getting charts was easy as lot of stuff was available on the internet.
+Making Ajax calls , displaying getting the response, showing the table data in unordered list was easy. I was familiar with ajax calls so it made my work easy.
+I have previously worked using ajax and displaying data through jquery which made the task easier. 
 
 ##Hard stuff
 
-Using maps in the code was a bit challenging as it took most of my time.
-Initializing the map was easy but adding multiple markers directly from the ajax data made it tougher as I never worked with such API's.
+I was not familiar with API calls so I had to familiarize myself with it using PHP curl.I had trouble inserting the api data into table but later I found out using implode function which joins each value .
+Getting the ajax timeout was tricky.
+As heroku does not support mysql so I had to use cleardb extension and update my connections in the code accordingly.
 
 ##other components
 
-I used MAP api and also used D3 js as it makes very beautiful charts.I installed Intellij IDE for writing javascript easily and it simplified a lot of work.
-as I found the nodejs and express plugins which eased the process as it provided a GUI button to run the server and not writing the same commands again and again through commandline.
+I used XAMPP(Apache, mysql,php,perl) package which made my work easy working with database and php simultaneously.
 
-##Commands
+##using it professionally
 
-My code basically starts by running (node ./bin/www) command to start the express server
-which calls app.js
-app.js routes the app to index.js which calls the index.ejs view page to display the index page.
-
-To deploy the app to heroku server the following commands are used
-* $ heroku login(provide email and password)
-* $ heroku create appname
-* $ git init(to initialize repository)
-* $ git add .
-* $ git commit -m "commit statement"
-* $ git push heroku master
-
+If I had to use it professionally my biggest concern would be the framework of PHP which suits better for the clients needs.
+There are many PHP frameworks like CodeIgniter which is old, Laravel and magento are much in demand. Depending on the clients need I would choose the framework which makes my task easier to code the particular thing and it should support the MVC paradigm so as to differentiate between the views and controllers.
 
 
 
